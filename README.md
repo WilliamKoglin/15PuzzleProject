@@ -33,7 +33,7 @@ Solution:
 
 ## Limitations
 Currently optimized for moderate difficulty puzzles.
-Very difficult states may require significantly more memory/time.
+Difficult states may require more memory/time.
 
 Future improvements:
 - Linear conflict heuristic
@@ -42,3 +42,5 @@ Future improvements:
 - Improvements to optimal path rebasing between explored nodes
 
 - MAKE TEST CASES!!!
+
+Development discontinued as fullstack project using this solver is on the way.
