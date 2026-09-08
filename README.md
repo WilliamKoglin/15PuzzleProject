@@ -36,11 +36,10 @@ Currently optimized for moderate difficulty puzzles.
 Difficult states may require more memory/time.
 
 Future improvements:
-- Linear conflict heuristic
 - Pattern databases
 - Improved duplicate state handling
 - Improvements to optimal path rebasing between explored nodes
 
 - MAKE TEST CASES!!!
 
-Development reopened to implement IDA* due to memory concerns in full stack deployment
+Development closed after IDA* implementation, bringing changes to 15SolverFullStack
