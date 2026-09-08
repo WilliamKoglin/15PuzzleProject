@@ -43,4 +43,4 @@ Future improvements:
 
 - MAKE TEST CASES!!!
 
-Development discontinued as fullstack project using this solver is on the way.
+Development reopened to implement IDA* due to memory concerns in full stack deployment
