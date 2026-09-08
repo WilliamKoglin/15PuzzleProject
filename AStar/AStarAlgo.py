@@ -43,15 +43,36 @@ def AStarSolve(init,sol):
         count +=1
         curr = heappop(priorityHeap)[1]
         if curr.board == sol:
-            moves = []
-            while curr.parent:
-                moves.append(curr.prev)
-                curr=curr.parent
-            print(f'Nodes expanded: {count}')
-            return moves[::-1]
+            return traceBack(curr)
         else:
             for item in getNeighbors(curr.board):
                 if item[0] not in exp:
                    newNode = Node(item[0],curr,item[1])
                    heappush(priorityHeap,(newNode.fCost,newNode))
                    exp.add(item[0])
+
+def traceBack(node):
+    moves = []
+    while node.parent:
+        moves.append(node.prev)
+        node = node.parent
+    return moves[::-1]
+
+# IDA*
+def IDASolve(init,sol):
+    #set flimit to initial node's fcost
+    #while true
+    # set var to IDFS(node, flimit)
+    # if ver returns a board, return board
+    # else, set flimit to var
+
+def IDFS(node, threshold):
+    #initialize min as max f-value of a 15 puzzle + 1
+    #if node == sol, call traceback with node, return list
+    #else cycle through getneighbors(node.board), we will call each node item
+    #if item.fcost < threshold, check if < min idfs(item,threshold), if so, set min to that val
+    #if item.fcost > threshold, check min against item.fcost
+    #return min
+    
+def getneighbiors(node):
+   #return list of Nodes with boards one move away from away from node excluding pervious move.
